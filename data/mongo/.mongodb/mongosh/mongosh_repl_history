@@ -1,0 +1,8 @@
+db.order.find().pretty()
+use orderdb
+show dbs
+db.products.find().pretty()
+use productdb
+db.products.find().pretty()
+show collections
+use eproject
