@@ -37,7 +37,7 @@ git clone https://github.com/lqkhanhh/LeQuocKhanh_22689261_Eproject.git
 ![results](public/results/order.png)
 ---------------
 ### Kết quả test postman với xem product
-![results](public/results/getproduct.png)
+![results](public/results/getProduct.png)
 ---------------
 ### Kết quả test postman với rabbit
 ![results](public/results/rabbit.png)
