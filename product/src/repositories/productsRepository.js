@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Product = require("../models/productModel");
 
 /**
  * Class that contains the business logic for the product repository interacting with the product model

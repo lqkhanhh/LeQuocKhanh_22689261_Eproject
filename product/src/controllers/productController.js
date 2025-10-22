@@ -10,28 +10,21 @@ class ProductController {
   constructor() {
     this.createOrder = this.createOrder.bind(this);
     this.getOrderStatus = this.getOrderStatus.bind(this);
+    this.productService = new ProductService();
+    this.getProductById = this.getProductById.bind(this);
     this.ordersMap = new Map();
 
   }
-    async getProductById(req, res, next) {
-    try {
-      const token = req.headers.authorization;
-      if (!token) {
-        return res.status(401).json({ message: "Unauthorized" });
-      }
-
-      const { id } = req.params;
-      const product = await Product.findById(id);
-
-      if (!product) {
-        return res.status(404).json({ message: "Không tìm thấy sản phẩm" });
-      }
-
-      res.status(200).json(product);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: "Server error" });
+  
+  async getProductsById(req,res,next)
+  {
+    const {id}= req.params;
+    const products= await this.ProductService.getProductsById(id);
+    if(!products)
+    {
+      return res.status(404).json({message: "Product not found"});
     }
+    res.status(200).json(products);
   }
 
   async createProduct(req, res, next) {
