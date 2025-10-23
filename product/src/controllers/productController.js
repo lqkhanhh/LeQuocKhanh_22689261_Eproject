@@ -16,16 +16,16 @@ class ProductController {
 
   }
   
-  async getProductsById(req,res,next)
-  {
-    const {id}= req.params;
-    const products= await this.ProductService.getProductsById(id);
-    if(!products)
-    {
-      return res.status(404).json({message: "Product not found"});
-    }
-    res.status(200).json(products);
-  }
+  // async getProductsById(req,res,next)
+  // {
+  //   const {id}= req.params;
+  //   const products= await this.ProductService.getProductsById(id);
+  //   if(!products)
+  //   {
+  //     return res.status(404).json({message: "Product not found"});
+  //   }
+  //   res.status(200).json(products);
+  // }
 
   
 
