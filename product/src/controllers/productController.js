@@ -27,6 +27,8 @@ class ProductController {
     res.status(200).json(products);
   }
 
+  
+
   async createProduct(req, res, next) {
     try {
       const token = req.headers.authorization;
